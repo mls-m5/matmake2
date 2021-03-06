@@ -27,5 +27,5 @@ jobs:
       run: 7z x LLVM11.exe -y -o"C:/Program Files/LLVM"
     - name: test-clang
       env: 
-        PATH: /Program Files/LLVM/bin;${env:PATH}
+        PATH: /Program Files/LLVM/bin;${{ env:PATH }}
       run: clang++ --version
