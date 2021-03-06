@@ -10,6 +10,7 @@ env:
   # You can convert this to a build matrix if you need coverage of multiple configuration types.
   # https://docs.github.com/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
   BUILD_CONFIGURATION: Release
+  PATH: C:/Program Files/LLVM/bin;$(PATH)
 
 jobs:
   build:
@@ -25,3 +26,5 @@ jobs:
       run: curl -fsSL -o LLVM11.exe https://releases.llvm.org/download.html#11.0.1
     - name: extract clang
       run: 7z x LLVM11.exe -y -o"C:/Program Files/LLVM"
+    - name: test-clang
+      run: clang++ --version
