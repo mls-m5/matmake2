@@ -1,6 +1,7 @@
-#pragma once
 
 #include "json/json.h"
+
+export module defaultfile;
 
 namespace defaultfile {
 

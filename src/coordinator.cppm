@@ -1,6 +1,5 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "nativecommands.cppm"
 #include "processedcommand.cppm"
 #include "settings.cppm"
@@ -10,6 +9,8 @@
 #include <mutex>
 #include <string>
 #include <thread>
+
+export module coordinator;
 
 //! Coordinates the build. The main thread handleds dependencies and triggers
 //! worker threads. Worker threads only handles their specific tasks, and when

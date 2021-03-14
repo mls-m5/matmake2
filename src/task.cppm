@@ -1,9 +1,7 @@
-﻿#pragma once
-
-#include "filesystem.cppm"
+﻿
+#include "filesystem.h"
 #include "processedcommand.cppm"
 #include "sourcetype.cppm"
-#include "task.cppm"
 #include "translateconfig.cppm"
 #include "json/json.h"
 #include <algorithm>
@@ -14,6 +12,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+export module task;
 
 const std::vector<std::string> stateMap = {
     "NotCalculated",

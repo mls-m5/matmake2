@@ -1,12 +1,12 @@
 
-#pragma once
-
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "line.cppm"
 #include "matmakefile.cppm"
 #include "json/json.h"
 #include <algorithm>
 #include <iostream>
+
+export module parsematmakefile;
 
 inline Json parseMatmakefile(std::istream &file) {
     auto json = Json{Json::Array};

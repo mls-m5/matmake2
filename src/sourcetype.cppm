@@ -1,7 +1,8 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include <map>
+
+export module sourcetype;
 
 enum class SourceType {
     NotFound,

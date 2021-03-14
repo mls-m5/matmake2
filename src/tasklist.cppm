@@ -1,12 +1,13 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "parsedepfile.cppm"
 #include "task.cppm"
 #include "json/json.h"
 #include <iostream>
 #include <memory>
 #include <vector>
+
+export module tasklist;
 
 struct TaskList;
 

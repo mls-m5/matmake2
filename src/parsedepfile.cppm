@@ -1,9 +1,10 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include <fstream>
 #include <sstream>
 #include <vector>
+
+export module parsedepfile;
 
 struct DepFileContent {
     std::vector<filesystem::path> deps;

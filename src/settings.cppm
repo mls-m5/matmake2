@@ -1,10 +1,11 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include <iostream>
 #include <sstream>
 #include <thread>
 #include <vector>
+
+export module settings;
 
 namespace settings {
 

@@ -1,8 +1,9 @@
-#pragma once
 
 #include "task.cppm"
 #include "json/json.h"
 #include <string>
+
+export module property;
 
 struct Property {
     Property() = default;

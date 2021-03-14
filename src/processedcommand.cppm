@@ -1,9 +1,10 @@
-#pragma once
 
 #include <map>
 #include <sstream>
 #include <string>
 #include <vector>
+
+export module processedcommand;
 
 class ProcessedCommand {
 public:

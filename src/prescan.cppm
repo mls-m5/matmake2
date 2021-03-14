@@ -1,12 +1,13 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "processedcommand.cppm"
 #include "sourcetype.cppm"
 #include "tasklist.cppm"
 #include "json/json.h"
 #include <iostream>
 #include <optional>
+
+export module prescan;
 
 struct PrescanResult {
     std::string name;

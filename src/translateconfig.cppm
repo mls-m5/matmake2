@@ -1,8 +1,9 @@
-#pragma once
 
 #include "os.cppm"
 #include <map>
 #include <string>
+
+export module translateconfig;
 
 enum class FlagStyle {
     Inherit,

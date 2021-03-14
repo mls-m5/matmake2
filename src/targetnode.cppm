@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿
+export module targetnode;
 
 class TargetNode {
 public:

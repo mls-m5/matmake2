@@ -1,4 +1,3 @@
-#pragma once
 
 #include "matmakefile.cppm"
 #include "prescan.cppm"
@@ -7,6 +6,8 @@
 #include "tasklist.cppm"
 #include "translateconfig.cppm"
 #include <memory>
+
+export module createtasks;
 
 namespace task {
 

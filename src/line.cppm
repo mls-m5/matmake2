@@ -1,9 +1,10 @@
-#pragma once
 
 #include <algorithm>
 #include <sstream>
 #include <string>
 #include <vector>
+
+export module line;
 
 inline std::string strip(std::string str) {
     while (!str.empty() && isspace(str.back())) {

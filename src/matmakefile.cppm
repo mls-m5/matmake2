@@ -1,9 +1,10 @@
-#pragma once
 
 #include "defaultfile.cppm"
 #include "property.cppm"
 #include "json/json.h"
 #include <iostream>
+
+export module matmakefile;
 
 // Contains data loaded from json object
 class MatmakeNode {

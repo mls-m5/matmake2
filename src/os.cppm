@@ -1,4 +1,5 @@
-#pragma once
+
+export module os;
 
 enum Os {
     Linux,

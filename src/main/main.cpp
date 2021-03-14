@@ -2,7 +2,7 @@
 
 #include "coordinator.cppm"
 #include "createtasks.cppm"
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "matmakefile.cppm"
 #include "msvcenvironment.cppm"
 #include "parsematmakefile.cppm"

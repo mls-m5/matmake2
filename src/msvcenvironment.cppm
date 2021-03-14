@@ -1,6 +1,5 @@
-#pragma once
 
-#include "filesystem.cppm"
+#include "filesystem.h"
 #include "os.cppm"
 #include <cstdlib>
 #include <iostream>
@@ -15,6 +14,8 @@ int setenv(const char *name, const char *value, int overwrite) {
 }
 
 #endif
+
+export module msvcenvironment;
 
 namespace msvcenvironment {
 
