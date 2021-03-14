@@ -1,9 +1,9 @@
 
 #pragma once
 
-#include "filesystem.h"
-#include "line.h"
-#include "matmakefile.h"
+#include "filesystem.cppm"
+#include "line.cppm"
+#include "matmakefile.cppm"
 #include "json/json.h"
 #include <algorithm>
 #include <iostream>

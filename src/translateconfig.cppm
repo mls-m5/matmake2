@@ -1,7 +1,6 @@
 #pragma once
 
-#include "os.h"
-#include "translateconfig.h"
+#include "os.cppm"
 #include <map>
 #include <string>
 

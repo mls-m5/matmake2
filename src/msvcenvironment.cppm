@@ -1,7 +1,7 @@
 #pragma once
 
-#include "filesystem.h"
-#include "os.h"
+#include "filesystem.cppm"
+#include "os.cppm"
 #include <cstdlib>
 #include <iostream>
 #include <numeric>

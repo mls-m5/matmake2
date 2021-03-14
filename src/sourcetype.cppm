@@ -1,6 +1,6 @@
 #pragma once
 
-#include "filesystem.h"
+#include "filesystem.cppm"
 #include <map>
 
 enum class SourceType {

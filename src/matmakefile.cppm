@@ -1,7 +1,7 @@
 #pragma once
 
-#include "defaultfile.h"
-#include "property.h"
+#include "defaultfile.cppm"
+#include "property.cppm"
 #include "json/json.h"
 #include <iostream>
 

@@ -1,8 +1,7 @@
 #pragma once
 
-#include "filesystem.h"
-#include "nativecommands.h"
-#include "task.h"
+#include "filesystem.cppm"
+#include "task.cppm"
 #include <iostream>
 #include <string>
 

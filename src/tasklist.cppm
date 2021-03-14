@@ -1,8 +1,8 @@
 #pragma once
-#include "filesystem.h"
-#include "parsedepfile.h"
-#include "task.h"
-#include "tasklist.h"
+
+#include "filesystem.cppm"
+#include "parsedepfile.cppm"
+#include "task.cppm"
 #include "json/json.h"
 #include <iostream>
 #include <memory>
@@ -113,8 +113,6 @@ struct TaskList {
         return _tasks.empty();
     }
 };
-
-#include "tasklist.h"
 
 void printFlat(const TaskList &list) {
     for (auto &task : list) {

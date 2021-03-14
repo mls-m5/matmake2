@@ -1,11 +1,11 @@
 #pragma once
 
-#include "matmakefile.h"
-#include "prescan.h"
-#include "sourcetype.h"
-#include "task.h"
-#include "tasklist.h"
-#include "translateconfig.h"
+#include "matmakefile.cppm"
+#include "prescan.cppm"
+#include "sourcetype.cppm"
+#include "task.cppm"
+#include "tasklist.cppm"
+#include "translateconfig.cppm"
 #include <memory>
 
 namespace task {

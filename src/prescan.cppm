@@ -1,9 +1,9 @@
 #pragma once
 
-#include "filesystem.h"
-#include "processedcommand.h"
-#include "sourcetype.h"
-#include "tasklist.h"
+#include "filesystem.cppm"
+#include "processedcommand.cppm"
+#include "sourcetype.cppm"
+#include "tasklist.cppm"
 #include "json/json.h"
 #include <iostream>
 #include <optional>

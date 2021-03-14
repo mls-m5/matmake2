@@ -1,7 +1,6 @@
 #pragma once
 
-#include "filesystem.h"
-#include "settings.h"
+#include "filesystem.cppm"
 #include <iostream>
 #include <sstream>
 #include <thread>

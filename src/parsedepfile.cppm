@@ -1,6 +1,6 @@
 #pragma once
 
-#include "filesystem.h"
+#include "filesystem.cppm"
 #include <fstream>
 #include <sstream>
 #include <vector>

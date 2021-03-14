@@ -1,10 +1,10 @@
 #pragma once
 
-#include "filesystem.h"
-#include "nativecommands.h"
-#include "processedcommand.h"
-#include "settings.h"
-#include "tasklist.h"
+#include "filesystem.cppm"
+#include "nativecommands.cppm"
+#include "processedcommand.cppm"
+#include "settings.cppm"
+#include "tasklist.cppm"
 #include <iostream>
 #include <map>
 #include <mutex>

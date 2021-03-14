@@ -3,7 +3,7 @@
 
 #include <algorithm>
 #include <chrono>
-#include "filesystem.h"
+#include "filesystem.cppm"
 #include <fstream>
 #include <iostream>
 #include <map>

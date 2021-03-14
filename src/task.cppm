@@ -1,10 +1,10 @@
 ﻿#pragma once
 
-#include "filesystem.h"
-#include "processedcommand.h"
-#include "sourcetype.h"
-#include "task.h"
-#include "translateconfig.h"
+#include "filesystem.cppm"
+#include "processedcommand.cppm"
+#include "sourcetype.cppm"
+#include "task.cppm"
+#include "translateconfig.cppm"
 #include "json/json.h"
 #include <algorithm>
 #include <array>
