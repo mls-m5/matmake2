@@ -16,9 +16,10 @@ struct PrescanResult {
 
 // Load in parsed information from prescaned file if it exist and is newer than
 // source
-std::optional<PrescanResult> parsePrescanResults(filesystem::path expandedFile,
-                                                 filesystem::path jsonFile,
-                                                 filesystem::path source) {
+inline std::optional<PrescanResult> parsePrescanResults(
+    filesystem::path expandedFile,
+    filesystem::path jsonFile,
+    filesystem::path source) {
 
     if (!filesystem::exists(expandedFile) || !filesystem::exists(jsonFile)) {
         return {}; // Not found -> create files
@@ -64,8 +65,8 @@ std::optional<PrescanResult> parsePrescanResults(filesystem::path expandedFile,
 }
 
 //! Parse a expanded file and alse write result to the provide json path
-PrescanResult parseExpandedFile(filesystem::path expandedFile,
-                                filesystem::path jsonFile) {
+inline PrescanResult parseExpandedFile(filesystem::path expandedFile,
+                                       filesystem::path jsonFile) {
     auto file = std::ifstream{expandedFile};
 
     if (!file.is_open()) {
@@ -194,7 +195,7 @@ PrescanResult prescan(Task &task) {
 }
 
 // Get or create a task for a header
-Task *getHeaderTask(TaskList &tasks, filesystem::path path) {
+inline Task *getHeaderTask(TaskList &tasks, filesystem::path path) {
     if (auto type = getType(path);
         type == SourceType::Header || type == SourceType::CxxHeader) {
         if (auto f = tasks.find(path.string())) {
@@ -209,7 +210,7 @@ Task *getHeaderTask(TaskList &tasks, filesystem::path path) {
     return {};
 }
 
-void prescan(TaskList &tasks) {
+inline void prescan(TaskList &tasks) {
     createDirectories(tasks);
 
     std::vector<std::pair<Task *, std::string>> connections;

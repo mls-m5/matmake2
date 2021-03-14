@@ -9,7 +9,7 @@ struct DepFileContent {
     std::vector<filesystem::path> deps;
 };
 
-DepFileContent parseDepFile(filesystem::path path) {
+inline DepFileContent parseDepFile(filesystem::path path) {
     DepFileContent ret;
     auto file = std::ifstream{path};
 
