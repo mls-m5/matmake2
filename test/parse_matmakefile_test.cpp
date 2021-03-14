@@ -1,8 +1,8 @@
 #define DO_NOT_CATCH_ERRORS
 
-#include "line.cppm"
+import line;
 #include "mls-unit-test/unittest.h"
-#include "parsematmakefile.cppm"
+import parsematmakefile;
 
 using namespace std::literals;
 

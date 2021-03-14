@@ -1,8 +1,8 @@
-#include "coordinator.cppm"
-#include "createtasks.cppm"
+import coordinator;
+import createtasks;
 #include "filesystem.h"
 #include "mls-unit-test/unittest.h"
-#include "parsematmakefile.cppm"
+import parsematmakefile;
 
 const auto workingDirectory = filesystem::current_path();
 

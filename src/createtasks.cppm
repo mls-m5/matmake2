@@ -1,10 +1,10 @@
 
-#include "matmakefile.cppm"
-#include "prescan.cppm"
-#include "sourcetype.cppm"
-#include "task.cppm"
-#include "tasklist.cppm"
-#include "translateconfig.cppm"
+import matmakefile;
+import prescan;
+import sourcetype;
+import task;
+import tasklist;
+import translateconfig;
 #include <memory>
 
 export module createtasks;

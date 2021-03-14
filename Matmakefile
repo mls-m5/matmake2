@@ -3,7 +3,7 @@
 matmake2
   out = matmake2
   src =
-    src/*.cpp
+    src/*.cppm
     src/main/*.cpp
   command = [exe]
   ldflags = -pthread
@@ -14,21 +14,21 @@ matmake2
 task_test
   out = task_test
   src =
-    src/*.cpp
+    src/*.cppm
     test/task_test.cpp
   command = [test]
 
 parse_matmakefile_test
   out = parse_matmakefile_test
   src =
-    src/*.cpp
+    src/*.cppm
     test/parse_matmakefile_test.cpp
   command = [test]
 
 build_test
   out = build_test
   src =
-    src/*.cpp
+    src/*.cppm
     test/build_test.cpp
   command = [test]
 
@@ -55,5 +55,9 @@ all
     Wall
     Wpedantic
     thread
-    debug
+    modules
+  flags =
+    -stdlib=libc++
+  eflags =
+    -stdlib=libc++
 

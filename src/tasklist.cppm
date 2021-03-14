@@ -1,11 +1,12 @@
 
 #include "filesystem.h"
-#include "parsedepfile.cppm"
-#include "task.cppm"
 #include "json/json.h"
 #include <iostream>
 #include <memory>
 #include <vector>
+
+import parsedepfile;
+import task;
 
 export module tasklist;
 

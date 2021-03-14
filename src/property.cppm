@@ -1,5 +1,5 @@
 
-#include "task.cppm"
+import task;
 #include "json/json.h"
 #include <string>
 

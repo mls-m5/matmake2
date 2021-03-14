@@ -1,13 +1,13 @@
 ﻿// copyright Mattias Larsson Sköld 2021
 
-#include "coordinator.cppm"
-#include "createtasks.cppm"
+import coordinator;
+import createtasks;
 #include "filesystem.h"
-#include "matmakefile.cppm"
-#include "msvcenvironment.cppm"
-#include "parsematmakefile.cppm"
-#include "settings.cppm"
-#include "tasklist.cppm"
+import matmakefile;
+import msvcenvironment;
+import parsematmakefile;
+import settings;
+import tasklist;
 #include "json/json.h"
 
 namespace {

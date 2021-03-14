@@ -1,10 +1,13 @@
 
 #include "filesystem.h"
-#include "os.cppm"
 #include <cstdlib>
 #include <iostream>
 #include <numeric>
 #include <vector>
+
+import os;
+
+export module msvcenvironment;
 
 #ifdef MATMAKE_USING_WINDOWS
 
@@ -14,8 +17,6 @@ int setenv(const char *name, const char *value, int overwrite) {
 }
 
 #endif
-
-export module msvcenvironment;
 
 namespace msvcenvironment {
 
@@ -44,7 +45,7 @@ std::string concatPaths(std::vector<filesystem::path> paths) {
 
 } // namespace msvcenvironment
 
-void setMsvcEnvironment() {
+export void setMsvcEnvironment() {
     using namespace msvcenvironment;
     filesystem::path driveC = [] {
         if (getOs() == Os::Windows) {
@@ -56,7 +57,7 @@ void setMsvcEnvironment() {
         }
     }();
 
-    auto programFiles = [driveC] {
+    auto findProgramFiles = [](filesystem::path driveC) {
         for (auto &it : filesystem::directory_iterator{driveC}) {
             auto name = it.path().filename().string();
             // Program files folder can be named "Program Files (x86)" or
@@ -67,7 +68,9 @@ void setMsvcEnvironment() {
             }
         }
         throw std::runtime_error{"no program files folder was found"};
-    }();
+    };
+
+    auto programFiles = findProgramFiles(driveC);
 
     auto winSdk = programFiles / "Windows Kits" / "10";
     auto vsSdk = getHighest(programFiles / "Microsoft Visual Studio");

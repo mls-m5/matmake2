@@ -1,7 +1,7 @@
 
 #include "filesystem.h"
-#include "line.cppm"
-#include "matmakefile.cppm"
+import line;
+import matmakefile;
 #include "json/json.h"
 #include <algorithm>
 #include <iostream>

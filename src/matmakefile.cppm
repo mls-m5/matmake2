@@ -1,6 +1,6 @@
 
-#include "defaultfile.cppm"
-#include "property.cppm"
+import defaultfile;
+import property;
 #include "json/json.h"
 #include <iostream>
 

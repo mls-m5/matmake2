@@ -1,8 +1,5 @@
 ﻿
 #include "filesystem.h"
-#include "processedcommand.cppm"
-#include "sourcetype.cppm"
-#include "translateconfig.cppm"
 #include "json/json.h"
 #include <algorithm>
 #include <array>
@@ -12,6 +9,10 @@
 #include <sstream>
 #include <string>
 #include <vector>
+
+import processedcommand;
+import sourcetype;
+import translateconfig;
 
 export module task;
 
@@ -24,7 +25,7 @@ const std::vector<std::string> stateMap = {
     "Done",
 };
 
-enum class TaskState {
+export enum class TaskState {
     NotCalculated,
     Raw, // Input file: nothing to do
     Fresh,
@@ -33,7 +34,7 @@ enum class TaskState {
     Done,
 };
 
-inline std::string join(std::string a, std::string b) {
+export std::string join(std::string a, std::string b) {
     if (a.empty()) {
         return b;
     }
@@ -43,7 +44,7 @@ inline std::string join(std::string a, std::string b) {
     return a + " " + b;
 }
 
-enum class BuildLocation : size_t {
+export enum class BuildLocation : size_t {
     Real,         // Build results that should be part of the final product
     Intermediate, // Object files and others not part of final product
     Count,        // Put last, counts possibilities
@@ -51,12 +52,12 @@ enum class BuildLocation : size_t {
     Inherit, // Select depending on target
 };
 
-class Task {
+export class Task {
 public:
     using TimePoint = filesystem::file_time_type;
 
     Task() = default;
-    Task(const class Json &json) {
+    Task(const Json &json) {
         parse(json);
     }
     Task(const Task &) = delete;
@@ -361,9 +362,9 @@ public:
         throw std::runtime_error{"no command specified for target " + name()};
     }
 
-    void commands(std::map<std::string, std::string> commands) {
-        _commands = std::move(commands);
-    }
+    //    void commands(std::map<std::string, std::string> commands) {
+    //        _commands = std::move(commands);
+    //    }
 
     const std::map<std::string, std::string> &commands() const {
         if (_commands.empty() && _parent) {

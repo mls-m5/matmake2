@@ -4,7 +4,7 @@
 
 export module sourcetype;
 
-enum class SourceType {
+export enum class SourceType {
     NotFound,
 
     Header,
@@ -39,7 +39,7 @@ inline const auto sourceTypeMap = std::map<filesystem::path, SourceType>{
     {".obj", SourceType::Object},
 };
 
-inline SourceType getType(filesystem::path path) {
+export inline SourceType getType(filesystem::path path) {
     if (auto f = sourceTypeMap.find(path.extension());
         f != sourceTypeMap.end()) {
         return f->second;

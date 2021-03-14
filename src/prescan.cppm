@@ -1,8 +1,8 @@
 
 #include "filesystem.h"
-#include "processedcommand.cppm"
-#include "sourcetype.cppm"
-#include "tasklist.cppm"
+import processedcommand;
+import sourcetype;
+import tasklist;
 #include "json/json.h"
 #include <iostream>
 #include <optional>

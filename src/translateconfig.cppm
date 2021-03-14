@@ -1,17 +1,17 @@
 
-#include "os.cppm"
+import os;
 #include <map>
 #include <string>
 
 export module translateconfig;
 
-enum class FlagStyle {
+export enum class FlagStyle {
     Inherit,
     Gcc,
     Msvc,
 };
 
-enum class TranslatableString {
+export enum class TranslatableString {
     ExeExtension,
     ObjectExtension, // eg. ".o" or ".obj"
     IncludeModuleString,
@@ -57,7 +57,7 @@ const std::map<std::string, std::string> msvcCmdToExt = {
 };
 
 //! Strings starting with "c++"
-std::string translateStandard(std::string config, FlagStyle style) {
+inline std::string translateStandard(std::string config, FlagStyle style) {
     switch (style) {
     case FlagStyle::Msvc:
         return "/std:" + config;
@@ -66,7 +66,7 @@ std::string translateStandard(std::string config, FlagStyle style) {
     }
 }
 
-std::string osExeExtension() {
+inline std::string osExeExtension() {
     if constexpr (getOs() == Os::Windows) {
         return ".exe";
     }
@@ -77,7 +77,7 @@ std::string osExeExtension() {
 
 } // namespace
 
-inline std::string translateConfig(std::string config, FlagStyle style) {
+export std::string translateConfig(std::string config, FlagStyle style) {
     if (config.rfind("c++") != std::string::npos) {
         return translateStandard(config, style);
     }
@@ -96,7 +96,7 @@ inline std::string translateConfig(std::string config, FlagStyle style) {
     return {};
 }
 
-inline std::string includePrefix(FlagStyle style) {
+export std::string includePrefix(FlagStyle style) {
     switch (style) {
     case FlagStyle::Msvc:
         return "/I";
@@ -105,7 +105,7 @@ inline std::string includePrefix(FlagStyle style) {
     }
 }
 
-inline std::string translateString(TranslatableString name, FlagStyle style) {
+export std::string translateString(TranslatableString name, FlagStyle style) {
     if (style == FlagStyle::Msvc) {
         switch (name) {
         case TranslatableString::ExeExtension:
@@ -130,7 +130,7 @@ inline std::string translateString(TranslatableString name, FlagStyle style) {
     return {};
 }
 
-inline std::string extension(std::string ext, FlagStyle style) {
+export inline std::string extension(std::string ext, FlagStyle style) {
     if (ext.empty()) {
         return {};
     }
@@ -158,8 +158,8 @@ inline std::string extension(std::string ext, FlagStyle style) {
     return ext;
 }
 
-inline std::string extensionFromCommandType(std::string command,
-                                            FlagStyle style) {
+export inline std::string extensionFromCommandType(std::string command,
+                                                   FlagStyle style) {
     if (command.empty()) {
         return {};
     }

@@ -48,6 +48,7 @@ fi
 echo building with ${CXX}...
 
 ${CXX} -o build/matmake2 matmake.cpp \
-        -Isrc -Ilib/json.h/include -std=c++17 -pthread -g
+        -Isrc -Ilib/json.h/include -std=c++17 -pthread -g \
+        -include src/modulecompat.h
 
 echo done...

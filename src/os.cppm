@@ -1,7 +1,7 @@
 
 export module os;
 
-enum Os {
+export enum Os {
     Linux,
     Windows,
 };
@@ -9,7 +9,7 @@ enum Os {
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #define MATMAKE_USING_WINDOWS
 #endif
-constexpr Os getOs() {
+export constexpr Os getOs() {
 #ifdef MATMAKE_USING_WINDOWS
     return Os::Windows;
 #else

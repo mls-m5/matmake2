@@ -1,6 +1,6 @@
 
 #include "filesystem.h"
-#include "task.cppm"
+import task;
 #include <iostream>
 #include <string>
 

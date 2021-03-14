@@ -1,9 +1,9 @@
 
 #include "filesystem.h"
-#include "nativecommands.cppm"
-#include "processedcommand.cppm"
-#include "settings.cppm"
-#include "tasklist.cppm"
+import nativecommands;
+import processedcommand;
+import settings;
+import tasklist;
 #include <iostream>
 #include <map>
 #include <mutex>

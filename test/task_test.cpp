@@ -1,5 +1,5 @@
 #include "mls-unit-test/unittest.h"
-#include "task.cppm"
+import task;
 
 TEST_SUIT_BEGIN
 
