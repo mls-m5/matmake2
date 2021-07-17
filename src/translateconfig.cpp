@@ -7,7 +7,7 @@ const std::map<std::string, std::string> gccConfigs = {
     {"debug", "-g"},
     {"modules", "-fmodules-ts"},
     {"thread", "-pthread"},
-    {"PIC", "-fPIC"},
+    {"PIC", "-fPIC -Wl,--enable-new-dtags,-rpath,\"\\$ORIGIN/LIB\""},
 };
 const std::map<std::string, std::string> msvcConfigs = {
     {"debug", "/DEBUG"},
